@@ -1,3 +1,27 @@
+Important Notes: 
+- Ayaw lang sa pagbutang ug Social Networks by Month. What I mean is the image, leave it as is lang sa. 
+- Pag-interpret, sa Tasks sa ka focus, unsay nahitabo. Follow these order of precedence as a guide for examining Interactions: 
+
+	Tasks for Admin to Faculty: 
+	1. Bulletin Board
+
+	Tasks for Faculty to Admin: 
+	1. Reactions
+	2. Comments 
+
+	Tasks for Faculty to Students: 
+	1. Register
+	2. Enroll 
+	3. Attendance
+	4. Onlineclass(Kanang mga roomid)
+	5. Event
+	6. Grade
+
+	Tasks for Faculty to Faculty
+	1. 
+
+
+
 
 IV. Results and Discussion
 	(Some description)
@@ -8,22 +32,25 @@ A. Learning Interactions for the Month of October 2020: 1st Quarter Assessment
 	(Some detailed descriptions)
 
 A.1 Admin to Faculty Interactions: (Insert subtitle)
-	(Some descriptions)
+	(Some interpretations)
+
+A.2 Faculty to Admin Interactions: ()
+	(Some interpretations)
 
 A.2 Faculty Member to Student/Parent Interactions: (Insert Title)
-	(Some Descriptions)
+	(Some interpretations)
 
 A.3 Faculty Member to Faculty Member Interactions: (Insert Title)
-	(Some descriptions)
+	(Some interpretations)
 
 A.4 Student to Faculty Member Interactions: (Insert Title)
-	(Some descriptions)
+	(Some interpretations)
 
 A.5 Parent to Faculty Member Interactions: (Insert Title)
-	(Some descriptions)
+	(Some interpretations)
 
 A.6 Parent to Parent Interactions: (Insert Title)
-	(Some descriptions)
+	(Some interpretations)
 
 A.7 Social Network for the Month of October 2020: 1st Quarter Assessment
 	(Some descriptions)
@@ -91,9 +118,12 @@ E.1 Faculty Member to Student Interactions: (Insert Title)
 E.2 Student to Faculty Member Interactions: (Insert Title)
 	(Some descriptions)
 
-D.3 Social Network for the Month of January 2021:
+E.3 Social Network for the Month of January 2021:
 	(Some descriptions)
 
 
 
+F. Summary (Later nani buhata)
+
+F.1 Table for the Evolution of Networks 
 
