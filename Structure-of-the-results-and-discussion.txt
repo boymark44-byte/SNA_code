@@ -4,10 +4,12 @@ Important Notes:
 
 	Tasks for Admin to Faculty: 
 	1. Bulletin Board
+	2. Reactions and Comments
 
 	Tasks for Faculty to Admin: 
 	1. Reactions
 	2. Comments 
+	
 
 	Tasks for Faculty to Students: 
 	1. Register
@@ -16,11 +18,29 @@ Important Notes:
 	4. Onlineclass(Kanang mga roomid)
 	5. Event
 	6. Grade
+	7. Re-assign
+	8. Reactions and Comments
+	9. Assignment
 
 	Tasks for Faculty to Faculty
-	1. 
+	1. Bulletin Board
+	2. collaborate
+	3. Onlineclass (katong room)
+	4. Reactions and Comments
 
+	Tasks for Students to Faculty
+	1. Attend Onlineclass
+	2. Reactions and Comments
+	3. Submit Assignment 
+	4. View Bulletin Board
 
+	Tasks for Parents to Faculty
+	1. Reactions and Comments
+	2. View Bulletin Board
+	
+	Tasks for Parents to Parents
+	1. Reactions and Comments
+	2. Bulletin Board
 
 
 IV. Results and Discussion
