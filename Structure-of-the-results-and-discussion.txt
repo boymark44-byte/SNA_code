@@ -9,7 +9,6 @@ Important Notes:
 	Tasks for Faculty to Admin: 
 	1. Reactions
 	2. Comments 
-	
 
 	Tasks for Faculty to Students: 
 	1. Register
