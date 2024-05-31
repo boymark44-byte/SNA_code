@@ -1,46 +1,46 @@
 -- Main Query 
 SELECT initiatorid, tltype, receiverid, ts
 FROM timeline 
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 	AND schoolid = '128081'; 
 	
 SELECT initiatorid, receiverid, reactor, reaction, ts
 FROM reactions
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
 SELECT initiatorid, receiverid, commenter, ts
 FROM comments
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
 SELECT participantid, roomid, ts
 FROM onlineclass
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'; 
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'; 
 
 
 -- Using FULL JOIN Part II: personid is present on either the initiatorid or receiverid
 WITH timeline AS (
 	SELECT initiatorid, receiverid, tltype, ts
 	FROM timeline 
-	WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
+	WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 		AND schoolid = '128081'
-), 
+),
 
 reactions AS (
 	SELECT initiatorid, receiverid, reactor, reaction, ts
 	FROM reactions
-	WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
+	WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 ),
 
 comments AS (
 	SELECT initiatorid, receiverid, commenter, ts
 	FROM comments
-	WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
+	WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 ),
 
 processmining AS (
 	SELECT personid, type_, ts
 	FROM processmining
-	WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
+	WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 )
 
 SELECT 
@@ -149,9 +149,10 @@ FROM onlineclass
 WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
 
 
--- Exploring the person table
+-- Exploring the processmining table
 SELECT * 
-FROM person;
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
 
 
