@@ -12,8 +12,8 @@ SELECT initiatorid, receiverid, commenter, ts
 FROM comments
 WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
-SELECT participantid, roomid, ts
-FROM onlineclass
+SELECT *
+FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'; 
 
 
@@ -60,52 +60,28 @@ FULL JOIN processmining p ON COALESCE(t.initiatorid, r.initiatorid, c.initiatori
 
 
 -- Explore the timeline table 
-SELECT * 
+SELECT initiatorid, tltype, receiverid, ts
 FROM timeline 
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'; 
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
+	AND schoolid = '128081'; 
 
+-- Exploring the timeline table for the month of Oct 2020 from the perspective of an Admin
+SELECT initiatorid, tltype, receiverid, ts
+FROM timeline 
+WHERE ts BETWEEN '2020-10-05' AND '2021-10-31'
+	AND schoolid = '128081'; 
+	
 SELECT DISTINCT tltype
 FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'; 
-
-SELECT DISTINCT schoolid
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
-
-SELECT *
+WHERE ts BETWEEN '2020-10-05' AND '2021-10-31'
+	AND schoolid = '128081'; 
+	
+SELECT initiatorid, receiverid, tltype, ts
 FROM timeline
 WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(initiatorid, 1) = 'A';
+AND LEFT(initiatorid, 1) = 'A' AND schoolid = '128081';
 
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(receiverid, 1) = 'A';
 
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(initiatorid, 1) = 'F';
-
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(receiverid, 1) = 'F';
-
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(initiatorid, 1) = 'S';
-
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(receiverid, 1) = 'S';
-
-SELECT *
-FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
-AND LEFT(initiatorid, 1) = 'P';
 
 
 
@@ -127,7 +103,7 @@ WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
 -- Exploring the comments table
 SELECT * 
 FROM comments
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
 SELECT initiatorid, receiverid, commenter, ts
 FROM comments
@@ -135,24 +111,25 @@ WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
 
 
 
--- Exploring the onlineclass table
-SELECT *
-FROM onlineclass
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
-
-SELECT roomid, participantid, ts
-FROM onlineclass
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'; 
-
-SELECT DISTINCT roomid
-FROM onlineclass
-WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
-
-
--- Exploring the processmining table
+-- Exploring the processmining table for the whole period from October 2020 until January 2021
 SELECT * 
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
+
+
+-- Exploring the processmining table during the month of October 2020 from the perspective of an Admin
+SELECT * 
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
+
+SELECT DISTINCT type_
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
+
+SELECT * 
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+AND LEFT(personid, 1) = 'A';
 
 
 
