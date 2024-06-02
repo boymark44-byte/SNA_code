@@ -1,22 +1,4 @@
--- Main Query 
-SELECT initiatorid, tltype, receiverid, ts
-FROM timeline 
-WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
-	AND schoolid = '128081'; 
-	
-SELECT initiatorid, receiverid, reactor, reaction, ts
-FROM reactions
-WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
-
-SELECT initiatorid, receiverid, commenter, ts
-FROM comments
-WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
-
-SELECT *
-FROM processmining
-WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'; 
-
-
+-- Main Query for the Whole Dataset
 -- Using FULL JOIN Part II: personid is present on either the initiatorid or receiverid
 WITH timeline AS (
 	SELECT initiatorid, receiverid, tltype, ts
@@ -65,23 +47,35 @@ FROM timeline
 WHERE ts BETWEEN '2020-10-05' AND '2021-01-31'
 	AND schoolid = '128081'; 
 
+
 -- Exploring the timeline table for the month of Oct 2020 from the perspective of an Admin
 SELECT initiatorid, tltype, receiverid, ts
 FROM timeline 
-WHERE ts BETWEEN '2020-10-05' AND '2021-10-31'
-	AND schoolid = '128081'; 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND LEFT(initiatorid, 1) = 'A'; 
 	
+-- Features that were utilized by Admin
 SELECT DISTINCT tltype
 FROM timeline
-WHERE ts BETWEEN '2020-10-05' AND '2021-10-31'
-	AND schoolid = '128081'; 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND LEFT(initiatorid, 1) = 'A'; 
 	
-SELECT initiatorid, receiverid, tltype, ts
+SELECT initiatorid, receiverid, tlmessage, tltype, ts
 FROM timeline
 WHERE ts BETWEEN '2020-10-05' AND '2021-02-28'
 AND LEFT(initiatorid, 1) = 'A' AND schoolid = '128081';
 
 
+-- Exploring the timeline table for the month of October 2020 from the perspective of a Teacher 
+SELECT initiatorid, tltype, tlmessage, receiverid, ts
+FROM timeline 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'S'); 
+
+SELECT DISTINCT receiverid, tltype, tlmessage, ts
+FROM timeline 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'S') AND tltype = 'register'; 
 
 
 
@@ -97,6 +91,7 @@ WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
 SELECT DISTINCT reaction
 FROM reactions
 WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
+
 
 
 
@@ -122,11 +117,13 @@ SELECT *
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
 
-SELECT DISTINCT type_
-FROM processmining
-WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
-
 SELECT * 
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND LEFT(personid, 1) = 'A';
+
+-- Features that were accessed by the Admin 
+SELECT DISTINCT type_, personid
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
 AND LEFT(personid, 1) = 'A';
