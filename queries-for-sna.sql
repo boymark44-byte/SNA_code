@@ -70,13 +70,23 @@ AND LEFT(initiatorid, 1) = 'A' AND schoolid = '128081';
 SELECT initiatorid, tltype, tlmessage, receiverid, ts
 FROM timeline 
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
-	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'S'); 
+	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'F'); 
 
 SELECT DISTINCT receiverid, tltype, tlmessage, ts
 FROM timeline 
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
 	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'S') AND tltype = 'register'; 
 
+-- Exploring the timeline table for the month of October 2020 from the perspective of a Parent 
+SELECT initiatorid, receiverid, tltype, tlmessage, ts
+FROM timeline 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'P' AND LEFT(receiverid, 1) = 'P'); 
+
+SELECT initiatorid, receiverid, tltype, tlmessage, ts
+FROM timeline 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND schoolid = '128081' AND (LEFT(initiatorid, 1) = 'F' AND LEFT(receiverid, 1) = 'S'); 
 
 
 -- Exploring the reactions table
@@ -105,6 +115,20 @@ FROM comments
 WHERE ts BETWEEN '2020-10-05' AND '2021-02-28';
 
 
+-- Exploring the comments table from the perspective of a Student 
+SELECT initiatorid, receiverid, commenter, comment 
+FROM comments 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND LEFT(commenter, 1) = 'S'; 
+	
+-- Exploring the comments table from the perspective of a Parent 
+SELECT initiatorid, receiverid, commenter, comment 
+FROM comments 
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+	AND LEFT(commenter, 1) = 'P'; 
+
+
+
 
 -- Exploring the processmining table for the whole period from October 2020 until January 2021
 SELECT * 
@@ -117,6 +141,11 @@ SELECT *
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
 
+SELECT DISTINCT type_
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
+
+
 SELECT * 
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
@@ -127,6 +156,13 @@ SELECT DISTINCT type_, personid
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
 AND LEFT(personid, 1) = 'A';
+
+
+-- Exploring the processmining table during the month of October 2020 from the perspective of a Parent 
+SELECT DISTINCT type_, personid, ts
+FROM processmining
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
+AND LEFT(personid, 1) = 'P';
 
 
 
