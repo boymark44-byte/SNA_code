@@ -143,7 +143,9 @@ WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
 
 SELECT DISTINCT type_
 FROM processmining
-WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
+WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
+
+
 
 
 SELECT * 
@@ -162,7 +164,8 @@ AND LEFT(personid, 1) = 'A';
 SELECT DISTINCT type_, personid, ts
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
-AND LEFT(personid, 1) = 'P';
+	AND LEFT(personid, 1) = 'F'
+	AND UPPER(type_) like upper('get pos%');
 
 
 
