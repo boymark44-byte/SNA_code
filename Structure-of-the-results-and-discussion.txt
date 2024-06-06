@@ -7,7 +7,28 @@ This notes contains the recent instruction of Dr. Orven
 6. Add joined_video_conference as an alternative tasks node to Video Conferencing
 
 
-Tasks for today: 
-1. Remove some sensitive data from the processmining table 
-2. Remove the "Get Post and Entry Link" and "Associate Post and Entry Link"
-3. 
+Tasks from the 'type_' column for the Month of October: 
+comment
+(Compute LOP is in January)
+Encode Score Tutorial
+Main Tutorial
+react 
+Retrieve Exams
+Retrieve Score Tutorial
+Subject Mgt Tutorial
+view assignment
+view attendance
+view Bulletin Board 
+view calendar
+view collaborate 
+view enroll 
+view event 
+view grade 
+view register 
+
+Cleaned Data: 
+- get_assignment
+- get_raw_scores
+- get_student_answer
+- joined_video_conference
+- view_submission 
