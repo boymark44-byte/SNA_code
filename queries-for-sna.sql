@@ -141,17 +141,14 @@ SELECT *
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
 
+
 SELECT DISTINCT type_
 FROM processmining
 WHERE ts BETWEEN '2020-10-05' AND '2021-01-31';
 
-
-
-
-SELECT * 
+SELECT DISTINCT type_
 FROM processmining
-WHERE ts BETWEEN '2020-10-05' AND '2020-10-31'
-	AND LEFT(personid, 1) = 'A';
+WHERE ts BETWEEN '2020-10-05' AND '2020-10-31';
 
 -- Features that were accessed by the Admin 
 SELECT DISTINCT type_, personid
