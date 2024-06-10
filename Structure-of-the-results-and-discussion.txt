@@ -8,23 +8,31 @@ This notes contains the recent instruction of Dr. Orven
 
 
 Tasks from the 'type_' column for the Month of October: 
-comment
-(Compute LOP is in January)
-Encode Score Tutorial
-Main Tutorial
-react 
-Retrieve Exams
-Retrieve Score Tutorial
-Subject Mgt Tutorial
-view assignment
-view attendance
-view Bulletin Board 
-view calendar
-view collaborate 
-view enroll 
-view event 
-view grade 
-view register 
+'comment'
+'Compute LOP'
+'Encode Score Tutorial'
+'Main Tutorial'
+'react' 
+'Retrieve Exams'
+'Retrieve Score Tutorial'
+'Subject Mgt Tutorial'
+'view assignment'
+'view attendance'
+'view Bulletin Board' 
+'view calendar'
+'view collaborate' 
+'view enroll' 
+'view event' 
+'view grade' 
+'view register' 
+'get_assignment'
+'get_raw_scores'
+'get_student_answer'
+'joined_video_conference'
+'view_submission' 
+
+
+
 
 Cleaned Data: 
 - get_assignment
@@ -32,3 +40,27 @@ Cleaned Data:
 - get_student_answer
 - joined_video_conference
 - view_submission 
+
+
+Comment & 'comment' & Brown \\ \hline
+Compute Level of Proficiency & 'Compute LOP' & Brown \\ \hline
+Encode Score Tutorial & 'Encode Score Tutorial' & Brown \\ \hline
+Main Score Tutorial & 'Main Score Tutorial' & Brown \\ \hline
+React & 'react' & Brown \\ \hline
+Retrieve Exams & 'Retrieve Exams' & Brown \\ \hline
+Retrieve Score Tutorial & 'Retrieve Score Tutorial' & Brown \\ \hline
+Subject Management Tutorial & 'Subject Management Tutorial' & Brown \\ \hline
+View Assignment & 'view assignment' & Brown \\ \hline
+View Attendance & 'view attendance' & Brown \\ \hline
+View Bulletin Board & 'view Bulletin Board' & Brown \\ \hline
+View Calendar & 'view calendar' & Brown \\ \hline
+View Collaborate & 'view collaborate' & Brown \\ \hline
+View Enroll & 'view enroll' & Brown \\ \hline
+View Event & 'view event' & Brown \\ \hline
+View Grade & 'view grade' & Brown \\ \hline
+View Register & 'view register' & Brown \\ \hline
+Get Assignment (Subject) (Student-ID)&(ection) & 'get_assignment' & Brown \\ \hline
+Get Raw Scores (Subject) (Student-ID)&(Section) & 'get_raw_scores' & Brown \\ \hline
+Get Student Answer (Subject) (Student-ID)&(Section) & 'get_student_answer' & Brown \\ \hline
+Joined {Random 14-Character String} Video Conference & 'joined_video_conference' & Brown \\ \hline
+View Submission of {Student-ID} & 'view_submission' & Brown \\ \hline
